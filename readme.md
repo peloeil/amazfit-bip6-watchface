@@ -1,6 +1,6 @@
 # LUMEN ORBIT
 
-Amazfit Bip 6用文字盤 **1.9.1** と、作成・最適化・導入に使うツール。
+Amazfit Bip 6用文字盤 **1.9.2** と、作成・最適化・導入に使うツール。
 Windows導入ツール **LUMEN ORBIT LINK 1.0.5** のバージョンは文字盤と独立して管理する。
 
 ## 構成
@@ -30,13 +30,15 @@ publish/        配布するZPKとZIP
 - 何の処理・メモリが減るか説明できない変更は行わない。無駄がなければ完了とする。
 - 改善の前提として利用者に電池持ちの比較測定を要求しない。未測定の効果を成果として報告しない。
 
-現行文字盤は利用者が実機で数日間使用し、正常動作を確認済み。
+文字盤1.9.1は利用者が実機で数日間使用し、正常動作を確認済み。
 これを基準に、変更で影響する表示・機能を確認する。
+
+1.9.2ではデジタル表示を時・分のみに変更。アナログ秒針は維持する。
 
 ## 時計へ導入
 
 1. [Windows導入ツール](publish/lumen-orbit-link-windows.zip)を展開する。
-2. [文字盤1.9.1](publish/lumen-orbit-bip6.zpk)を `lumen-orbit-link.exe` にドラッグ＆ドロップする。
+2. [文字盤1.9.2](publish/lumen-orbit-bip6.zpk)を `lumen-orbit-link.exe` にドラッグ＆ドロップする。
 3. PCに表示されたQRをAndroidのZeppで読み取る。
 
 PC・AndroidのTailscale接続とZeppの開発者モードが必要。

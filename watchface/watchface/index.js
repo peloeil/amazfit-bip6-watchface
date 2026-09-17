@@ -52,16 +52,6 @@ WatchFace({
       minute_space: 2,
       minute_follow: 0,
       minute_align: left,
-      minute_unit_en: 'colon.png',
-      minute_unit_sc: 'colon.png',
-      minute_unit_tc: 'colon.png',
-      second_startX: 320,
-      second_startY: 20,
-      second_array: digits,
-      second_zero: 1,
-      second_space: 2,
-      second_follow: 0,
-      second_align: left,
       show_level: normal
     });
 

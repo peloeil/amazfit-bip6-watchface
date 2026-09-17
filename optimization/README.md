@@ -30,3 +30,5 @@ uv run optimize-zpk.py ../watchface/dist ../publish/lumen-orbit-bip6.zpk --sourc
 アプリID・名称・バージョンの不一致はエラーにする。
 
 開発・配布のルールは [AGENTS.md](../AGENTS.md) を参照。
+
+スクリプトは [MIT License](../LICENSE) で公開する。

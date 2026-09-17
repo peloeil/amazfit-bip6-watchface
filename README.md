@@ -39,7 +39,8 @@ GitHub Releasesで公開予定。同じwatchfaceリリースのAssetsから次�
 
 ## ライセンス
 
-自作コード・watchface画像のライセンスは未設定。第三者ライセンス:
+自作コード・watchface画像は [MIT License](LICENSE) で公開する。
+第三者コードには、それぞれのライセンスが適用される。
 
 - [QRコードライブラリ](zpk-link/QR-LICENSE.txt)
 - [Goランタイム](zpk-link/GO-LICENSE.txt)

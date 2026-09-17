@@ -21,3 +21,5 @@ node build.js build
 ZIPで作業する場合は、別配布の最適化用ZIPをソースZIPと同じ親フォルダへ展開する。
 
 開発・配布のルールは [AGENTS.md](../AGENTS.md) を参照。
+
+ソースコード・画像は [MIT License](../LICENSE) で公開する。

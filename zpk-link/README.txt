@@ -35,6 +35,10 @@ ZPKはTailscale内で配信する。アクセスできる端末はTailscaleの�
 
 開発・配布のルールは、親フォルダの AGENTS.md を参照。
 
+ライセンス:
+自作コードはMITライセンス。全文は親フォルダの LICENSE を参照。
+第三者ライセンスは QR-LICENSE.txt と GO-LICENSE.txt を参照。
+
 再ビルド（Go 1.24以降）:
 作業ツリー・配布ZIPとも、zpk-link ディレクトリで実行。
   go test ./...

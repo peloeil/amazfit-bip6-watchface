@@ -26,7 +26,7 @@ watchfaceの配布物を引き継ぐ場合は、同じリリースの次の3フ�
 
 導入ツールは `zpk-link-windows.zip` に、`zpk-link/` のWindows x64実行ファイル・
 ソース・操作手順・第三者ライセンスを収録する。
-各ZIPのルートに `AGENTS.md` と、設定済みのプロジェクトライセンス文書を含める。
+各ZIPのルートに `AGENTS.md` と、プロジェクトのMITライセンス文書 `LICENSE` を含める。
 
 ## リリース
 

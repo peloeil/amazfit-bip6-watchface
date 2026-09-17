@@ -1,4 +1,4 @@
-LUMEN ORBIT LINK 1.0.5 — Windows x64
+LUMEN ORBIT LINK 1.0.6 — Windows x64
 
 初回準備:
 【PCとAndroid】Tailscaleをインストールして接続する。同じアカウントを使えばよい。
@@ -49,15 +49,20 @@ Zepp 10.8.1でwatchface://を読んだ際の「Fail to get watch face details」
 
 Goソースとwebディレクトリは確認・再ビルド用。通常はexeだけを使う。
 文字盤は別配布の lumen-orbit-bip6.zpk を使う。
-文字盤1.9.1と導入ツール1.0.5は、それぞれ独立したバージョン。
+文字盤1.9.2と導入ツール1.0.6は、それぞれ独立したバージョン。
 Go/Node.js/Pythonのインストールは不要。
 
 1.0.5では、ファイル選択画面の旧版ファイル名を汎用的な案内に変更。
 テストはその場で作るZIPを使い、旧版の文字盤と固定ハッシュ・容量への依存を解消。
 
+1.0.6では、状態が変わらないときの画面更新を省略。
+通信エラーから復帰したときは、同じ状態でも画面を更新する。
+
 再ビルド（Go 1.24以降）:
 作業ツリー・配布ZIPとも、link-windows ディレクトリで実行。
   go test ./...
+画面更新のテスト（Node.jsが必要）:
+  node --test test-app.js
 Windows PowerShell:
   go build -trimpath -ldflags="-s -w" -o lumen-orbit-link.exe .
 Linux/macOSからWindows x64向け:

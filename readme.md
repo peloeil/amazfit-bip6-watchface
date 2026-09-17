@@ -1,7 +1,7 @@
 # LUMEN ORBIT
 
 Amazfit Bip 6用文字盤 **1.9.2** と、作成・最適化・導入に使うツール。
-Windows導入ツール **LUMEN ORBIT LINK 1.0.5** のバージョンは文字盤と独立して管理する。
+Windows導入ツール **LUMEN ORBIT LINK 1.0.6** のバージョンは文字盤と独立して管理する。
 
 ## 構成
 

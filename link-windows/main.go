@@ -497,7 +497,7 @@ func main() {
 		}
 	}()
 	localURL := "http://" + a.localHost + "/pc/"
-	fmt.Println("LUMEN ORBIT LINK 1.0.5 / Windows\n【PC】ブラウザで開いてください：\n" + localURL + "\n終了：PC画面の終了ボタン、または Ctrl+C。")
+	fmt.Println("LUMEN ORBIT LINK 1.0.6 / Windows\n【PC】ブラウザで開いてください：\n" + localURL + "\n終了：PC画面の終了ボタン、または Ctrl+C。")
 	if !*noBrowser {
 		cmd := exec.Command("rundll32", "url.dll,FileProtocolHandler", localURL)
 		if e := cmd.Start(); e == nil {

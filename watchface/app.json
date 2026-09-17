@@ -24,7 +24,7 @@
     "bip6": {
       "module": {
         "watchface": {
-          "path": "watchface/index",
+          "path": "src/index",
           "main": 1,
           "editable": 0,
           "lockscreen": 0

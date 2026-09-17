@@ -11,7 +11,8 @@ https://tailscale.com/download
 https://docs.zepp.com/docs/guides/tools/zepp-app/
 
 最短の操作:
-1.【Windows PC】ZIPを展開し、手元のZPKを zpk-link.exe のアイコンへ
+1.【Windows PC】ZIPを展開し、中の zpk-link フォルダを開く。
+   手元のZPKを、そのフォルダの zpk-link.exe のアイコンへ
    ドラッグ＆ドロップする。PCのブラウザに導入用QRが表示される。
    初回にHTTPS設定を求められたら、PC画面のリンクから有効にする。
 2.【スマートフォン・Zepp】接続した時計 → 一般 → 開発者モード → ＋ → スキャンを開き、
@@ -19,6 +20,17 @@ https://docs.zepp.com/docs/guides/tools/zepp-app/
 3.【Windows PC】Zeppと時計で転送完了を確認したら、PC画面の「終了」を押す。
 
 exeを普通に開いた場合も、PCのブラウザにある「ZPKを選択」でファイルを選べる。
+
+ZIPの展開後:
+  展開先/
+    AGENTS.md
+    LICENSE
+    zpk-link/
+      zpk-link.exe
+      README.txt
+      QR-LICENSE.txt
+      GO-LICENSE.txt
+      （ソースコードも同じフォルダに収録）
 
 ZPKはTailscale内で配信する。アクセスできる端末はTailscaleの設定に従う。
 

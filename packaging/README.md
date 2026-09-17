@@ -1,17 +1,34 @@
-# LUMEN ORBIT 1.9.2 — ZPK最適化
+# LUMEN ORBIT 1.9.2 — 配布用ZPKの作成
 
-標準ビルドの `.zab` / `.zpk` を、対応するソースPNGから最適化する。
+標準ビルドの `.zab` / `.zpk` に元PNGの色・透明度を反映し、検証・圧縮した配布用ZPKを作成する。
 [uv](https://docs.astral.sh/uv/getting-started/installation/) が必要。
-Pythonと依存パッケージは `optimize-zpk.py` のインラインメタデータに従って用意される。
+Pythonと依存パッケージは `prepare-zpk.py` のインラインメタデータに従って用意される。
 初回実行時はインターネット接続が必要。
+
+処理の流れ: watchfaceのソース・画像 → ZeusでZABを作成 → このスクリプトで画像補正・検証・圧縮 → 配布用ZPK。
+
+## ZIPの展開先
+
+同じリリースの `lumen-orbit-bip6-source.zip` と `lumen-orbit-bip6-packaging.zip` の中身を、
+1つの作業フォルダへ展開する。ZIP名のフォルダが作られた場合は、その中身を移して次の配置にする。
+
+```text
+作業フォルダ/
+├── AGENTS.md
+├── LICENSE
+├── watchface/       ← src/、assets/、app.json、build.js
+└── packaging/      ← このREADME、prepare-zpk.py
+```
+
+`watchface/` と `packaging/` は同じ階層に置く。
+重複する `AGENTS.md` と `LICENSE` は同じリリースなら同一内容なので、上書きしてよい。
 
 ## 実行手順
 
-[watchfaceをビルド](../watchface/README.md)し、`optimization/` で実行する。
-ZIPで作業する場合は、ソースZIPと最適化用ZIPを同じ親フォルダへ展開する。
+[watchfaceをビルド](../watchface/README.md)し、作業フォルダの `packaging/` で実行する。
 
 ```sh
-uv run optimize-zpk.py ../watchface/dist ../publish/lumen-orbit-bip6.zpk --source ../watchface --fixed
+uv run prepare-zpk.py ../watchface/dist ../publish/lumen-orbit-bip6.zpk --source ../watchface --fixed
 ```
 
 出力先の `publish/` は自動で作成される。

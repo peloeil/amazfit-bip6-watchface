@@ -1226,4 +1226,4 @@ QRCode.createBytes = function(buffer, rsBlocks) {
 module.exports = QRCode;
 
 },
-};const cache={};function require(name){name=name.replace(/^\.\//, "");if(!cache[name]){const module={exports:{}};cache[name]=module;modules[name](module,module.exports,require);}return cache[name].exports;}globalThis.LumenQR=require("QRCore");globalThis.LumenQRError=require("QRErrorCorrectLevel");})();
+};const cache={};function require(name){name=name.replace(/^\.\//, "");if(!cache[name]){const module={exports:{}};cache[name]=module;modules[name](module,module.exports,require);}return cache[name].exports;}globalThis.ZPKQR=require("QRCore");globalThis.ZPKQRError=require("QRErrorCorrectLevel");})();

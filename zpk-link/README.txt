@@ -1,7 +1,7 @@
-LUMEN ORBIT LINK 1.0.6 — Windows x64
+ZPK LINK 1.0.6 — Windows x64
 
-LUMEN ORBITのwatchfaceをWindows PCから時計へ導入するためのツール。
-watchfaceのZPKは、GitHub Releasesの同じwatchfaceリリースから別途取得する。
+watchfaceのZPKをPCから配信し、Zeppで読み取るQRを表示する。
+時計に対応するZPKを用意する。
 
 初回準備:
 【PCとスマートフォン】Tailscaleをインストールして接続する。同じアカウントを使えばよい。
@@ -11,10 +11,10 @@ https://tailscale.com/download
 https://docs.zepp.com/docs/guides/tools/zepp-app/
 
 最短の操作:
-1.【Windows PC】ZIPを展開し、手元のZPKを lumen-orbit-link.exe のアイコンへ
+1.【Windows PC】ZIPを展開し、手元のZPKを zpk-link.exe のアイコンへ
    ドラッグ＆ドロップする。PCのブラウザに導入用QRが表示される。
    初回にHTTPS設定を求められたら、PC画面のリンクから有効にする。
-2.【スマートフォン・Zepp】Bip 6 → 一般 → 開発者モード → ＋ → スキャンを開き、
+2.【スマートフォン・Zepp】接続した時計 → 一般 → 開発者モード → ＋ → スキャンを開き、
    PC画面のQRを読み取る。
 3.【Windows PC】Zeppと時計で転送完了を確認したら、PC画面の「終了」を押す。
 
@@ -36,11 +36,11 @@ ZPKはTailscale内で配信する。アクセスできる端末はTailscaleの�
 開発・配布のルールは、親フォルダの AGENTS.md を参照。
 
 再ビルド（Go 1.24以降）:
-作業ツリー・配布ZIPとも、link-windows ディレクトリで実行。
+作業ツリー・配布ZIPとも、zpk-link ディレクトリで実行。
   go test ./...
 画面更新のテスト（Node.jsが必要）:
   node --test test-app.js
 Windows PowerShell:
-  go build -trimpath -ldflags="-s -w" -o lumen-orbit-link.exe .
+  go build -trimpath -ldflags="-s -w" -o zpk-link.exe .
 Linux/macOSからWindows x64向け:
-  GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o lumen-orbit-link.exe .
+  GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o zpk-link.exe .

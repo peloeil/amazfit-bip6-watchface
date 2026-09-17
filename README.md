@@ -12,7 +12,7 @@ Amazfit Bip 6用watchface **1.9.2**。
 - PCとスマートフォンの両方で接続したTailscale。
 - Zeppの開発者モード。
 
-初回設定・詳しい操作・接続できない場合は [導入ツールの手順](link-windows/README.txt) を参照。
+初回設定・詳しい操作・接続できない場合は [導入ツールの手順](zpk-link/README.txt) を参照。
 
 ## ダウンロード・導入
 
@@ -21,10 +21,10 @@ GitHub Releasesで公開予定。同じwatchfaceリリースのAssetsから次�
 | ファイル | 用途 |
 | --- | --- |
 | `lumen-orbit-bip6.zpk` | 時計へ導入するwatchface |
-| `lumen-orbit-link-windows.zip` | Windows導入ツール LUMEN ORBIT LINK 1.0.6 |
+| `zpk-link-windows.zip` | ZPK配信用ツール ZPK LINK 1.0.6（Windows） |
 
 1. Windows導入ツールのZIPを展開する。
-2. watchfaceのZPKを `lumen-orbit-link.exe` にドラッグ＆ドロップする。
+2. watchfaceのZPKを `zpk-link.exe` にドラッグ＆ドロップする。
 3. PCに表示されたQRを、スマートフォンのZeppの開発者モードで読み取る。
 4. Zeppと時計で転送完了を確認し、PC画面の「終了」を押す。
 
@@ -32,7 +32,7 @@ GitHub Releasesで公開予定。同じwatchfaceリリースのAssetsから次�
 
 - [watchfaceのビルド](watchface/README.md)
 - [ZPKの最適化](optimization/README.md)
-- [導入ツールのテスト・再ビルド](link-windows/README.txt)
+- [導入ツールのテスト・再ビルド](zpk-link/README.txt)
 - [開発方針・配布手順](AGENTS.md)
 
 ソースZIPと最適化用ZIPもReleasesに添付する。
@@ -41,5 +41,5 @@ GitHub Releasesで公開予定。同じwatchfaceリリースのAssetsから次�
 
 自作コード・watchface画像のライセンスは未設定。第三者ライセンス:
 
-- [QRコードライブラリ](link-windows/QR-LICENSE.txt)
-- [Goランタイム](link-windows/GO-LICENSE.txt)
+- [QRコードライブラリ](zpk-link/QR-LICENSE.txt)
+- [Goランタイム](zpk-link/GO-LICENSE.txt)

@@ -11,7 +11,7 @@
 
 - watchfaceのビルド: `watchface/README.md`
 - ZPKの最適化・画像とパッケージの検証: `optimization/README.md`
-- 導入ツールのテスト・ビルド: `link-windows/README.txt`
+- 導入ツールのテスト・ビルド: `zpk-link/README.txt`
 
 ## 配布物の作成・引き継ぎ
 
@@ -24,7 +24,7 @@ watchfaceの配布物を引き継ぐ場合は、同じリリースの次の3フ�
 2. `lumen-orbit-bip6-source.zip`: `watchface/` のソース・画像・設定・ビルド手順。
 3. `lumen-orbit-bip6-optimization.zip`: `optimization/` のスクリプト・実行手順。
 
-導入ツールは `lumen-orbit-link-windows.zip` に、`link-windows/` のWindows x64実行ファイル・
+導入ツールは `zpk-link-windows.zip` に、`zpk-link/` のWindows x64実行ファイル・
 ソース・操作手順・第三者ライセンスを収録する。
 各ZIPのルートに `AGENTS.md` と、設定済みのプロジェクトライセンス文書を含める。
 

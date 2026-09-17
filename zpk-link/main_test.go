@@ -61,7 +61,7 @@ func call(a *application, method, path, host, identity, origin string, body []by
 	}
 	if origin != "" {
 		r.Header.Set("Origin", origin)
-		r.Header.Set("X-Lumen-Action", "1")
+		r.Header.Set("X-ZPK-Action", "1")
 	}
 	w := httptest.NewRecorder()
 	a.handler(w, r)

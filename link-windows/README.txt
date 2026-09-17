@@ -1,13 +1,12 @@
 LUMEN ORBIT LINK 1.0.6 — Windows x64
 
-LUMEN ORBITの文字盤をWindows PCから時計へ導入するためのツール。
-文字盤のZPKは、GitHub Releasesの同じ文字盤リリースから別途取得する。
-通常の導入にGo・Node.js・Pythonのインストールは不要。
+LUMEN ORBITのwatchfaceをWindows PCから時計へ導入するためのツール。
+watchfaceのZPKは、GitHub Releasesの同じwatchfaceリリースから別途取得する。
 
 初回準備:
-【PCとAndroid】Tailscaleをインストールして接続する。同じアカウントを使えばよい。
+【PCとスマートフォン】Tailscaleをインストールして接続する。同じアカウントを使えばよい。
 https://tailscale.com/download
-【Android・Zepp】開発者モードを有効にする。
+【スマートフォン・Zepp】開発者モードを有効にする。
 プロフィール → 設定 → バージョン情報 → Zeppロゴを7回タップ。
 https://docs.zepp.com/docs/guides/tools/zepp-app/
 
@@ -15,32 +14,26 @@ https://docs.zepp.com/docs/guides/tools/zepp-app/
 1.【Windows PC】ZIPを展開し、手元のZPKを lumen-orbit-link.exe のアイコンへ
    ドラッグ＆ドロップする。PCのブラウザに導入用QRが表示される。
    初回にHTTPS設定を求められたら、PC画面のリンクから有効にする。
-2.【Android・Zepp】Bip 6 → 一般 → 開発者モード → ＋ → スキャンを開き、
+2.【スマートフォン・Zepp】Bip 6 → 一般 → 開発者モード → ＋ → スキャンを開き、
    PC画面のQRを読み取る。
 3.【Windows PC】Zeppと時計で転送完了を確認したら、PC画面の「終了」を押す。
 
 exeを普通に開いた場合も、PCのブラウザにある「ZPKを選択」でファイルを選べる。
-Androidのブラウザ・ファイル選択・中継用QRは使わない。
 
-PC上のZPKをそのままZeppへ渡す。ファイルは書き換えない。
-アクセス制御はTailscaleの設定に従う。独自のユーザー認証・有効期限はない。
-PCのサーバーは127.0.0.1だけで待ち受け、Tailscale ServeでZPKを配信する。
-一般公開用のFunnelは起動しない。
-https://tailscale.com/docs/features/tailscale-serve
+ZPKはTailscale内で配信する。アクセスできる端末はTailscaleの設定に従う。
 
 接続できない場合:
 「Fail to get watch face details」が出た場合:
-【PC】QRの下の「ファイル要求」と、【Android・Zepp】のバージョンを確認する。
+【PC】QRの下の「ファイル要求」と、【スマートフォン・Zepp】のバージョンを確認する。
 ・未到達: この配信処理にZPKの要求が届いていない。接続またはQR解釈を調べる。
 ・HTTP 200: PCがZPKの応答を返した。Zeppの解析や時計への導入成功は意味しない。
 ・HTTP 403など: PC側で要求を拒否した。表示をそのまま報告する。
-【PC】「エラーが出た場合」を開くと、AndroidのChromeで接続を確認するURLがある。
-【PC・Android両方】Tailscaleの接続とアクセス設定を確認。
+【PC】「エラーが出た場合」を開くと、スマートフォンのブラウザで接続を確認するURLがある。
+【PC・スマートフォン両方】Tailscaleの接続とアクセス設定を確認。
 【PC】転送が終わるまでスリープさせない。
-【Android】ZeppをTailscaleのVPN除外対象にしない。
+【Android】Tailscaleの「App-based split tunneling」でZeppを除外している場合は、Zeppのチェックを外す。
 
-Goソースとwebディレクトリは確認・再ビルド用。通常はexeだけを使う。
-検証記録・変更履歴・配布手順は、親フォルダの AGENTS.md を参照。
+開発・配布のルールは、親フォルダの AGENTS.md を参照。
 
 再ビルド（Go 1.24以降）:
 作業ツリー・配布ZIPとも、link-windows ディレクトリで実行。

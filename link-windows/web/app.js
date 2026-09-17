@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id),base=new URL('.',location.href);
 let stopped=false,busy=false,lastInstall='',lastState='';
 function error(e){$('error').hidden=false;$('error').textContent=String(e.message||e);}
 function draw(text){const q=new LumenQR(-1,LumenQRError.M);q.addData(text);q.make();const n=q.getModuleCount(),unit=8,c=$('installQR');c.width=c.height=(n+8)*unit;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='#000';for(let y=0;y<n;y++)for(let x=0;x<n;x++)if(q.isDark(y,x))ctx.fillRect((x+4)*unit,(y+4)*unit,unit,unit);}
-function render(s){const ready=s.phase==='ready';$('phase').textContent=ready?'接続の準備完了':s.phase==='starting'?'接続を準備しています':'PCの接続設定を確認してください';$('message').textContent=ready&&s.selected?'【Android・Zepp】下のQRを読み取ってください。':s.message;
+function render(s){const ready=s.phase==='ready';$('phase').textContent=ready?'接続の準備完了':s.phase==='starting'?'接続を準備しています':'PCの接続設定を確認してください';$('message').textContent=ready&&s.selected?'【スマートフォン・Zepp】下のQRを読み取ってください。':s.message;
  $('setup').hidden=ready;$('retry').disabled=s.phase==='starting';$('consent').hidden=true;if(s.setupURL){const u=new URL(s.setupURL);if(u.protocol==='https:'&&u.hostname==='login.tailscale.com'){$('consent').href=u.href;$('consent').hidden=false;}}
  $('select').hidden=s.selected;$('install').hidden=!ready||!s.selected;
  $('request').textContent='ファイル要求：'+(s.lastRequest||'未到達');$('downloadURL').value=s.downloadURL||'';

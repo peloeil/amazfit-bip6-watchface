@@ -257,7 +257,7 @@ func tailscalePath() (string, error) {
 			return p, nil
 		}
 	}
-	return "", errors.New("【PC・Android両方】Tailscaleを接続してください。その後、このPC画面で「再確認」を押してください。")
+	return "", errors.New("【PC・スマートフォン両方】Tailscaleを接続してください。その後、このPC画面で「再確認」を押してください。")
 }
 func cliJSON(path string, args ...string) (map[string]any, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 8*time.Second)
@@ -372,7 +372,7 @@ func (l *serveLog) Write(b []byte) (int, error) {
 	if u := setupPattern.FindString(l.tail); u != "" {
 		l.a.mu.Lock()
 		l.a.state.SetupURL = u
-		l.a.state.Message = "初回のみ、TailscaleのHTTPS設定が必要です。「HTTPSを有効にする」を開いてください。Funnelの公開設定は不要です。"
+		l.a.state.Message = "初回のみ、TailscaleのHTTPS設定が必要です。「HTTPSを有効にする」を開いてください。"
 		l.a.mu.Unlock()
 	}
 	return len(b), nil

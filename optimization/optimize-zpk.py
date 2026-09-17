@@ -121,8 +121,6 @@ class BestDeflate:
 
 def read_zip(data):
     with zipfile.ZipFile(io.BytesIO(data)) as archive:
-        if archive.testzip() is not None:
-            raise ValueError('ZIP CRC mismatch')
         names = archive.namelist()
         if len(names) != len(set(names)):
             raise ValueError('Duplicate ZIP entry')

@@ -22,7 +22,7 @@ publish/        配布するZPKとZIP
 ## 時計へ導入
 
 1. [Windows導入ツール](publish/lumen-orbit-link-windows.zip)を展開する。
-2. [文字盤1.9.1](publish/lumen-orbit-bip6-1.9.1.zpk)を `lumen-orbit-link.exe` にドラッグ＆ドロップする。
+2. [文字盤1.9.1](publish/lumen-orbit-bip6.zpk)を `lumen-orbit-link.exe` にドラッグ＆ドロップする。
 3. PCに表示されたQRをAndroidのZeppで読み取る。
 
 PC・AndroidのTailscale接続とZeppの開発者モードが必要。
@@ -43,7 +43,7 @@ node build.js build
 
 ```sh
 cd ../optimization
-uv run optimize-zpk.py ../watchface/dist ../publish/lumen-orbit-bip6-1.9.1.zpk --source ../watchface --fixed
+uv run optimize-zpk.py ../watchface/dist ../publish/lumen-orbit-bip6.zpk --source ../watchface --fixed
 ```
 
 詳細は [文字盤のREADME](watchface/readme.md) と
@@ -52,12 +52,16 @@ Windows導入ツールのテスト・再ビルド手順は [こちら](link-wind
 
 ## 配布物
 
+配布ファイル名はバージョン番号を含まない固定名とし、履歴はGitで管理する。
+過去の配布物は、その時点のコミットから取得する。
+端末の更新判定に使うアプリ内部のバージョン番号は維持する。
+
 文字盤の次の3ファイルは、同じバージョンのセットで返却する。
 ソースZIPと最適化ZIPは分け、各READMEの返却・引き継ぎルールも維持する。
 
-1. [lumen-orbit-bip6-1.9.1.zpk](publish/lumen-orbit-bip6-1.9.1.zpk)
-2. [lumen-orbit-bip6-1.9.1-rebuild-source.zip](publish/lumen-orbit-bip6-1.9.1-rebuild-source.zip)
-3. [lumen-orbit-bip6-1.9.1-optimization.zip](publish/lumen-orbit-bip6-1.9.1-optimization.zip)
+1. [lumen-orbit-bip6.zpk](publish/lumen-orbit-bip6.zpk)
+2. [lumen-orbit-bip6-rebuild-source.zip](publish/lumen-orbit-bip6-rebuild-source.zip)
+3. [lumen-orbit-bip6-optimization.zip](publish/lumen-orbit-bip6-optimization.zip)
 
 導入ツールは [lumen-orbit-link-windows.zip](publish/lumen-orbit-link-windows.zip)。
 文字盤のZPKを同梱せず、利用者が選択したファイルをそのまま配信する。

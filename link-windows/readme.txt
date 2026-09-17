@@ -52,7 +52,7 @@ Zepp 10.8.1でwatchface://を読んだ際の「Fail to get watch face details」
 ZPKやpackageInfoは変更していない。10.8.1実機での改善確認は利用者の再試行待ち。
 
 Goソースとwebディレクトリは確認・再ビルド用。通常はexeだけを使う。
-文字盤は別配布の lumen-orbit-bip6-1.9.1.zpk を使う。
+文字盤は別配布の lumen-orbit-bip6.zpk を使う。
 文字盤1.9.1と導入ツール1.0.5は、それぞれ独立したバージョン。
 Go/Node.js/Pythonのインストールは不要。
 

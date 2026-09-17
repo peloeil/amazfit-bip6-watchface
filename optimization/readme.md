@@ -2,12 +2,15 @@
 
 ## 成果物の返却・引き継ぎルール
 
+配布ファイル名は固定し、履歴はGitのコミットで管理します。
+アプリ内部のバージョン番号は、端末の更新判定のため維持します。
+
 このウォッチフェイスの成果物を返す際は、変更の有無にかかわらず、最終回答に
 対応する最新版の次の3ファイルを、必ずこの順でまとめて提示してください。
 
-1. `lumen-orbit-bip6-<version>.zpk`：最適化済みの端末向けパッケージ。
-2. `lumen-orbit-bip6-<version>-rebuild-source.zip`：再ビルドに必要なソース・画像・設定・依存関係・手順。
-3. `lumen-orbit-bip6-<version>-optimization.zip`：最適化に必要なスクリプト・依存関係・実行手順。
+1. `lumen-orbit-bip6.zpk`：最適化済みの端末向けパッケージ。
+2. `lumen-orbit-bip6-rebuild-source.zip`：再ビルドに必要なソース・画像・設定・依存関係・手順。
+3. `lumen-orbit-bip6-optimization.zip`：最適化に必要なスクリプト・依存関係・実行手順。
 
 3ファイルは同じリリースに対応させてください。source ZIPと最適化用ZIPは分離し、
 不要な照合結果・作業記録は含めません。別セッションでもこの3ファイルを使うため、
@@ -27,10 +30,10 @@ source側のREADMEに従ってビルドした後、
 optimization ディレクトリで実行してください。
 
 ```sh
-uv run optimize-zpk.py ../watchface/dist ./lumen-orbit-bip6-1.9.1.zpk --source ../watchface --fixed
+uv run optimize-zpk.py ../watchface/dist ./lumen-orbit-bip6.zpk --source ../watchface --fixed
 ```
 
-出力は、このディレクトリの lumen-orbit-bip6-1.9.1.zpk です。
+出力は、このディレクトリの lumen-orbit-bip6.zpk です。
 入力のdistにZABが複数ある場合は、対象の .zab を直接指定してください。
 標準ビルドから取り出した .zpk も入力できます。
 --source には、そのビルドに対応するソースディレクトリを指定します。

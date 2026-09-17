@@ -1,4 +1,5 @@
 node_modules/
+/publish/
 /watchface/dist/
 __pycache__/
 *.py[cod]

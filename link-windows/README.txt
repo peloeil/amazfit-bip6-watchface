@@ -1,5 +1,9 @@
 LUMEN ORBIT LINK 1.0.6 — Windows x64
 
+LUMEN ORBITの文字盤をWindows PCから時計へ導入するためのツール。
+文字盤のZPKは、GitHub Releasesの同じ文字盤リリースから別途取得する。
+通常の導入にGo・Node.js・Pythonのインストールは不要。
+
 初回準備:
 【PCとAndroid】Tailscaleをインストールして接続する。同じアカウントを使えばよい。
 https://tailscale.com/download
@@ -35,28 +39,8 @@ https://tailscale.com/docs/features/tailscale-serve
 【PC】転送が終わるまでスリープさせない。
 【Android】ZeppをTailscaleのVPN除外対象にしない。
 
-検証:
-Windows導入ツール経由でBip 6実機へ導入できることを利用者が確認済み。
-
-1.0.3では同じHTTPSホストの「:443」付き表記・大文字表記を拒否する不具合を修正。
-これはコード上で再現・修正した不具合であり、報告されたZeppエラーの原因は未確定。
-
-1.0.4では、ZPK本体を直接返す配信内容に合わせてQRをzpkd1://形式へ変更。
-Zepp 10.8.1でwatchface://を読んだ際の「Fail to get watch face details」に対する修正。
-公式Zeus CLIの時計盤フローは配布URLとpreviewの情報を読み取る。
-直接ZPKを返す今回の処理にwatchface://を使っていたため、形式が一致していなかった。
-2026-09-13に公開配布サイトのQRでもzpkd1://を確認した。
-
 Goソースとwebディレクトリは確認・再ビルド用。通常はexeだけを使う。
-文字盤は別配布の lumen-orbit-bip6.zpk を使う。
-文字盤1.9.2と導入ツール1.0.6は、それぞれ独立したバージョン。
-Go/Node.js/Pythonのインストールは不要。
-
-1.0.5では、ファイル選択画面の旧版ファイル名を汎用的な案内に変更。
-テストはその場で作るZIPを使い、旧版の文字盤と固定ハッシュ・容量への依存を解消。
-
-1.0.6では、状態が変わらないときの画面更新を省略。
-通信エラーから復帰したときは、同じ状態でも画面を更新する。
+検証記録・変更履歴・配布手順は、親フォルダの AGENTS.md を参照。
 
 再ビルド（Go 1.24以降）:
 作業ツリー・配布ZIPとも、link-windows ディレクトリで実行。

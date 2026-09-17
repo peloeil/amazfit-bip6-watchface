@@ -1,4 +1,4 @@
-/* QRCode by Kazuhiko Arase. See qr-license.txt. */
+/* QRCode by Kazuhiko Arase. See QR-LICENSE.txt. */
 (function(){
 const modules={
 "QR8bitByte":function(module,exports,require){

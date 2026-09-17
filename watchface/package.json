@@ -1,0 +1,7 @@
+{
+  "name": "lumen-orbit-bip6-build",
+  "private": true,
+  "dependencies": {
+    "@zeppos/zeus-cli": "1.9.3"
+  }
+}

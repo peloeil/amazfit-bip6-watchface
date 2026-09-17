@@ -1,0 +1,60 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 10650913,
+    "appName": "LUMEN ORBIT",
+    "appType": "watchface",
+    "version": {
+      "name": "1.9.1",
+      "code": 11
+    },
+    "vender": "Personal",
+    "description": "Analog and digital seconds, date, Japanese weekday, battery percentage",
+    "icon": "preview.png"
+  },
+  "permissions": [],
+  "runtime": {
+    "apiVersion": {
+      "minVersion": "1.0.0",
+      "target": "1.0.0",
+      "compatible": "1.0.0"
+    }
+  },
+  "targets": {
+    "bip6": {
+      "module": {
+        "watchface": {
+          "path": "watchface/index",
+          "main": 1,
+          "editable": 0,
+          "lockscreen": 0
+        }
+      },
+      "platforms": [
+        {
+          "name": "Amazfit Bip 6",
+          "deviceSource": 9765121
+        },
+        {
+          "name": "Amazfit Bip 6 CN",
+          "deviceSource": 9765120
+        },
+        {
+          "name": "Amazfit Bip 6 variant",
+          "deviceSource": 10158337
+        }
+      ],
+      "designWidth": 390
+    }
+  },
+  "i18n": {
+    "ja-JP": {
+      "appName": "LUMEN ORBIT"
+    },
+    "en-US": {
+      "appName": "LUMEN ORBIT"
+    }
+  },
+  "defaultLanguage": "ja-JP",
+  "debug": false
+}

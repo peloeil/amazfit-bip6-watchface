@@ -1,0 +1,6 @@
+node_modules/
+/watchface/dist/
+__pycache__/
+*.py[cod]
+/link-windows/lumen-orbit-link
+/link-windows/lumen-orbit-link.exe

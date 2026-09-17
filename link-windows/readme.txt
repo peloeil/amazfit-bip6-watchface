@@ -36,10 +36,7 @@ https://tailscale.com/docs/features/tailscale-serve
 【Android】ZeppをTailscaleのVPN除外対象にしない。
 
 検証:
-PCファイルの読込と完全一致、QRの別実装によるデコード、
-模擬Tailscaleでの起動・終了、PC画面の操作を確認。
-Windowsでの実行・Tailscale実網・Zepp/Bip 6実機の導入は未検証。
-画面操作はDOMシミュレーションで検証し、実描画は未確認。
+Windows導入ツール経由でBip 6実機へ導入できることを利用者が確認済み。
 
 1.0.3では同じHTTPSホストの「:443」付き表記・大文字表記を拒否する不具合を修正。
 これはコード上で再現・修正した不具合であり、報告されたZeppエラーの原因は未確定。
@@ -49,7 +46,6 @@ Zepp 10.8.1でwatchface://を読んだ際の「Fail to get watch face details」
 公式Zeus CLIの時計盤フローは配布URLとpreviewの情報を読み取る。
 直接ZPKを返す今回の処理にwatchface://を使っていたため、形式が一致していなかった。
 2026-09-13に公開配布サイトのQRでもzpkd1://を確認した。
-ZPKやpackageInfoは変更していない。10.8.1実機での改善確認は利用者の再試行待ち。
 
 Goソースとwebディレクトリは確認・再ビルド用。通常はexeだけを使う。
 文字盤は別配布の lumen-orbit-bip6.zpk を使う。

@@ -41,7 +41,7 @@ publish/        配布するZPKとZIP
 
 PC・AndroidのTailscale接続とZeppの開発者モードが必要。
 準備・操作・接続確認は [導入ツールのREADME](link-windows/readme.txt) を参照。
-Windows・Tailscale実網・Zepp/Bip 6実機での動作は未確認。
+Windows導入ツール経由でBip 6実機へ導入できることを利用者が確認済み。
 
 ## 再ビルド・最適化
 

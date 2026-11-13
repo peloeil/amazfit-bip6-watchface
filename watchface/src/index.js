@@ -35,8 +35,8 @@ WatchFace({
 
     image('s0.png', 12, 102);
     image('s1.png', 72, 42);
-    image('s2.png', 72, 355);
-    image('s3.png', 325, 102);
+    image('s2.png', 72, 354);
+    image('s3.png', 324, 102);
 
     // 後に作ったウィジェットが前面に描かれる。文字盤内の文字を針で隠さないよう、針を先に作る。
     ui.createWidget(widget.TIME_POINTER, {

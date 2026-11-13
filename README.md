@@ -1,6 +1,6 @@
 # LUMEN ORBIT
 
-Amazfit Bip 6用watchface **1.9.2**。
+Amazfit Bip 6用watchface **2.0.0**。
 アナログ時計に、デジタル時刻・日付・日本語の曜日・電池残量を組み合わせる。
 
 ![LUMEN ORBITの表示例](watchface/assets/bip6/preview.png)
@@ -78,6 +78,9 @@ watchface/ のソース・画像
 ## ライセンス
 
 自作コード・watchface画像は [MIT License](LICENSE) で公開する。
+数字・記号・曜日の画像は、[Inter](https://github.com/rsms/inter) と
+[Noto Sans JP](https://github.com/notofonts/noto-cjk) で描画した。
+どちらのフォントも [SIL Open Font License 1.1](https://openfontlicense.org) で提供されている。
 第三者コードには、それぞれのライセンスが適用される。
 
 - [QRコードライブラリ](zpk-link/QR-LICENSE.txt)

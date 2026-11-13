@@ -1,4 +1,4 @@
-# LUMEN ORBIT 1.9.2 — 再ビルド
+# LUMEN ORBIT 2.0.0 — 再ビルド
 
 Node.js・npm・インターネット接続が必要。
 ビルドツールは `package-lock.json` で固定している（Zeus CLI 1.9.3）。

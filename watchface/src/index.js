@@ -1,15 +1,8 @@
-const digits = [
-  'd0.png', 'd1.png', 'd2.png', 'd3.png', 'd4.png',
-  'd5.png', 'd6.png', 'd7.png', 'd8.png', 'd9.png'
-];
-const small = [
-  'n0.png', 'n1.png', 'n2.png', 'n3.png', 'n4.png',
-  'n5.png', 'n6.png', 'n7.png', 'n8.png', 'n9.png'
-];
-const weekdays = [
-  'w0.png', 'w1.png', 'w2.png', 'w3.png',
-  'w4.png', 'w5.png', 'w6.png'
-];
+const sequence = (dir, count) =>
+  Array.from({ length: count }, (_, i) => `${dir}/${i}.png`);
+const digits = sequence('time', 10);
+const small = sequence('info', 10);
+const weekdays = sequence('week', 7);
 
 WatchFace({
   build() {
@@ -33,10 +26,10 @@ WatchFace({
       show_level: normal
     });
 
-    image('s0.png', 12, 102);
-    image('s1.png', 72, 42);
-    image('s2.png', 72, 354);
-    image('s3.png', 324, 102);
+    image('dial/left.png', 12, 102);
+    image('dial/top.png', 72, 42);
+    image('dial/bottom.png', 72, 354);
+    image('dial/right.png', 324, 102);
 
     // 後に作ったウィジェットが前面に描かれる。文字盤内の文字を針で隠さないよう、針を先に作る。
     ui.createWidget(widget.TIME_POINTER, {
@@ -44,17 +37,17 @@ WatchFace({
       hour_centerY: 225,
       hour_posX: 6,
       hour_posY: 102,
-      hour_path: 'h.png',
+      hour_path: 'hand/hour.png',
       minute_centerX: 195,
       minute_centerY: 225,
       minute_posX: 8,
       minute_posY: 166,
-      minute_path: 'm.png',
+      minute_path: 'hand/minute.png',
       second_centerX: 195,
       second_centerY: 225,
       second_posX: 6,
       second_posY: 178,
-      second_path: 's.png',
+      second_path: 'hand/second.png',
       show_level: normal
     });
 
@@ -66,9 +59,9 @@ WatchFace({
       hour_space: 0,
       hour_follow: 0,
       hour_align: left,
-      hour_unit_en: 'colon.png',
-      hour_unit_sc: 'colon.png',
-      hour_unit_tc: 'colon.png',
+      hour_unit_en: 'time/colon.png',
+      hour_unit_sc: 'time/colon.png',
+      hour_unit_tc: 'time/colon.png',
       minute_startX: 204,
       minute_startY: 113,
       minute_array: digits,
@@ -86,9 +79,9 @@ WatchFace({
       month_space: 0,
       month_align: left,
       month_follow: 0,
-      month_unit_en: 'slash.png',
-      month_unit_sc: 'slash.png',
-      month_unit_tc: 'slash.png',
+      month_unit_en: 'info/slash.png',
+      month_unit_sc: 'info/slash.png',
+      month_unit_tc: 'info/slash.png',
       month_sc_array: small,
       month_tc_array: small,
       month_en_array: small,
@@ -122,9 +115,9 @@ WatchFace({
       font_array: small,
       h_space: 0,
       align_h: ui.align.CENTER_H,
-      unit_en: 'u.png',
-      unit_sc: 'u.png',
-      unit_tc: 'u.png',
+      unit_en: 'info/percent.png',
+      unit_sc: 'info/percent.png',
+      unit_tc: 'info/percent.png',
       show_level: normal
     });
   }

@@ -1,6 +1,6 @@
 # LUMEN ORBIT
 
-Amazfit Bip 6用watchface **2.0.1**。
+Amazfit Bip 6用watchface **2.0.2**。
 アナログ時計に、デジタル時刻・日付・日本語の曜日・電池残量を組み合わせる。
 
 ![LUMEN ORBITの表示例](watchface/assets/bip6/preview.png)

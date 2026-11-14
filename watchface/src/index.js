@@ -1,5 +1,5 @@
-// 端末は更新後も同じパスの画像に旧版の幅・高さを使う。画像の寸法を変えたら r3 のように新しいディレクトリへ移す。
-const asset = 'r2';
+// 端末は更新後も同じパスの画像に旧版の幅・高さを使う。画像の寸法を変えたら番号を上げた新しいディレクトリへ移す。
+const asset = 'r3';
 const sequence = (dir, count) =>
   Array.from({ length: count }, (_, i) => `${asset}/${dir}/${i}.png`);
 const digits = sequence('time', 10);
@@ -54,8 +54,8 @@ WatchFace({
     });
 
     ui.createWidget(widget.IMG_TIME, {
-      hour_startX: 108,
-      hour_startY: 106,
+      hour_startX: 90,
+      hour_startY: 100,
       hour_array: digits,
       hour_zero: 1,
       hour_space: 0,
@@ -64,8 +64,8 @@ WatchFace({
       hour_unit_en: `${asset}/time/colon.png`,
       hour_unit_sc: `${asset}/time/colon.png`,
       hour_unit_tc: `${asset}/time/colon.png`,
-      minute_startX: 207,
-      minute_startY: 106,
+      minute_startX: 208,
+      minute_startY: 100,
       minute_array: digits,
       minute_zero: 1,
       minute_space: 0,
@@ -75,8 +75,8 @@ WatchFace({
     });
 
     ui.createWidget(widget.IMG_DATE, {
-      month_startX: 135,
-      month_startY: 284,
+      month_startX: 125,
+      month_startY: 281,
       month_zero: 1,
       month_space: 0,
       month_align: left,
@@ -87,8 +87,8 @@ WatchFace({
       month_sc_array: small,
       month_tc_array: small,
       month_en_array: small,
-      day_startX: 183,
-      day_startY: 284,
+      day_startX: 181,
+      day_startY: 281,
       day_zero: 1,
       day_space: 0,
       day_align: left,
@@ -100,8 +100,8 @@ WatchFace({
     });
 
     ui.createWidget(widget.IMG_WEEK, {
-      x: 227,
-      y: 281,
+      x: 231,
+      y: 278,
       week_en: weekdays,
       week_sc: weekdays,
       week_tc: weekdays,
@@ -110,9 +110,9 @@ WatchFace({
 
     ui.createWidget(widget.TEXT_IMG, {
       x: 145,
-      y: 317,
+      y: 320,
       w: 100,
-      h: 27,
+      h: 33,
       type: ui.data_type.BATTERY,
       font_array: small,
       h_space: 0,

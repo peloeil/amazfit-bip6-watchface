@@ -5,8 +5,8 @@
     "appName": "LUMEN ORBIT",
     "appType": "watchface",
     "version": {
-      "name": "2.0.2",
-      "code": 15
+      "name": "2.0.3",
+      "code": 16
     },
     "vender": "Personal",
     "description": "Analog clock with seconds, digital hours and minutes, date, Japanese weekday, battery percentage",

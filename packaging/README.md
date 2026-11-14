@@ -1,4 +1,4 @@
-# LUMEN ORBIT 2.0.2 — 配布用ZPKの作成
+# LUMEN ORBIT 2.0.3 — 配布用ZPKの作成
 
 標準ビルドの `.zab` / `.zpk` に元PNGの色・透明度を反映し、検証・圧縮した配布用ZPKを作成する。
 [uv](https://docs.astral.sh/uv/getting-started/installation/) が必要。

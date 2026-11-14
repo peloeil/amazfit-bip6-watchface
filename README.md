@@ -16,7 +16,7 @@ Amazfit Bip 6用watchface **2.0.3**。
 
 ## ダウンロード・導入
 
-[GitHub ReleasesのLUMEN ORBIT 2.0.2](https://github.com/peloeil/amazfit-bip6-watchface/releases/tag/watchface-v2.0.2)から次の2ファイルを取得する。
+[GitHub ReleasesのLUMEN ORBIT 2.0.3](https://github.com/peloeil/amazfit-bip6-watchface/releases/tag/watchface-v2.0.3)から次の2ファイルを取得する。
 
 | ファイル | 用途 |
 | --- | --- |

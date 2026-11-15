@@ -4,6 +4,7 @@ const sequence = (dir, count) =>
   Array.from({ length: count }, (_, i) => `${asset}/${dir}/${i}.png`);
 const digits = sequence('time', 10);
 const small = sequence('info', 10);
+// IMG_WEEKは月曜始まりの順で画像を受け取る。日曜始まりにすると表示が1日ずれる。
 const weekdays = sequence('week', 7);
 
 WatchFace({
